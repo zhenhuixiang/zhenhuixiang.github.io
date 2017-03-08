@@ -257,10 +257,276 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/08/Python3-4-pyOpenGL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/08/Python3-4-pyOpenGL/" itemprop="url">
+                  Python3.4+pyOpenGL
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T10:50:27+08:00">
+                2017-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="PyOpenGL"><a href="#PyOpenGL" class="headerlink" title="PyOpenGL"></a>PyOpenGL</h1><hr>
+<h2 id="安装pyOpenGL"><a href="#安装pyOpenGL" class="headerlink" title="安装pyOpenGL"></a><a href="http://pyopengl.sourceforge.net/" target="_blank" rel="external">安装pyOpenGL</a></h2><ul>
+<li>默认已经安装了Python3.4</li>
+<li>一般的安装方式就是使用 <code>pip install PyOpenGL PyOpenGL_accelerate</code> 直接安装PyOpenGL和PyOpenGL_accelerate</li>
+</ul>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>在这个过程中可能会出现这样几个问题：</p>
+<ol>
+<li>需要对应版本的 Visual Studio,直接安装解决问题。<a href="http://www.itellyou.cn/" target="_blank" rel="external">下载地址</a></li>
+<li><p>安装成功后，运行实例代码出现如下错误提示</p>
+<blockquote>
+<p>C:\Users\Greg\Downloads&gt;shader_sphere.py<br>WARNING:OpenGL.arrays.numpymodule:Unable to load numpy_formathandler accelerator from OpenGL_accelerate<br>Traceback (most recent call last):<br>File “C:\Users\Greg\Downloads\shader_sphere.py”, line 116, in <module><br>TestContext.ContextMainLoop()<br>File “C:\Python27\lib\site-packages\openglcontext-2.1.0a11-py2.7.egg\OpenGLContext\glutcontext.py”, line 154, in ContextMainLoop<br>render = cls( <em>args, *</em>named)<br>File “C:\Python27\lib\site-packages\openglcontext-2.1.0a11-py2.7.egg\OpenGLContext\glutcontext.py”, line 30, in <strong>init</strong><br>glutInitDisplayMode( self.DISPLAYMODE )<br>File “C:\Python27\lib\site-packages\pyopengl-3.0.1-py2.7.egg\OpenGL\platform\baseplatform.py”, line 340, in <strong>call</strong><br>self.<strong>name</strong>, self.<strong>name</strong>,<br>OpenGL.error.NullFunctionError: Attempt to call an undefined function glutInitDisplayMode, check for bool(glutInitDisplayMode) before calling</module></p>
+</blockquote>
+<p> 这是因为下载的是32位的原因，而你需要下载64位的<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopengl" target="_blank" rel="external">下载链接</a></p>
+<blockquote>
+<p>python下如何安装.whl包？<br> 下载.whl包<br> 先pip install wheel<br> 之后pip install 包名字.whl 即可安装某模块包</p>
+</blockquote>
+</li>
+<li><p>报错如下：</p>
+<blockquote>
+<p>glutCreateWindow( “cube” )<br>ctypes.ArgumentError: argument 1: <class 'typeerror'="">: wrong type</class></p>
+</blockquote>
+<p> <a href="https://codeyarns.com/2012/04/27/pyopengl-glut-ctypes-error/" target="_blank" rel="external">解决方案</a></p>
+<blockquote>
+<p>glutCreateWindow( b”cube” )</p>
+</blockquote>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/08/Python3-4-PyQT5-eric6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/08/Python3-4-PyQT5-eric6/" itemprop="url">
+                  Python3.4+PyQT5+eric6
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T10:22:12+08:00">
+                2017-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
+<li><a href="https://www.python.org/" target="_blank" rel="external">官网</a>安装 python3.4</li>
+<li><a href="https://riverbankcomputing.com/software/pyqt/download5/" target="_blank" rel="external">安装</a> PyQT5</li>
+<li><a href="https://sourceforge.net/projects/eric-ide/files/eric6/stable/" target="_blank" rel="external">安装</a> eric6 [自己选个版本]</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/My-new-post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Nafeng">
+      <meta itemprop="name" content="甄慧翔">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -380,7 +646,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Nafeng">
+      <meta itemprop="name" content="甄慧翔">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -528,8 +794,8 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="Nafeng" />
-          <p class="site-author-name" itemprop="name">Nafeng</p>
+               alt="甄慧翔" />
+          <p class="site-author-name" itemprop="name">甄慧翔</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
           
@@ -539,7 +805,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -589,7 +855,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Nafeng</span>
+  <span class="author" itemprop="copyrightHolder">甄慧翔</span>
 </div>
 
 
