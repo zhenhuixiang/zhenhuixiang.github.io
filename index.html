@@ -257,6 +257,374 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/js疑难杂症/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风陵渡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/js疑难杂症/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T19:24:52+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="js疑难杂症聚集地"><a href="#js疑难杂症聚集地" class="headerlink" title="js疑难杂症聚集地"></a>js疑难杂症聚集地</h2><h5 id="争取药到病除"><a href="#争取药到病除" class="headerlink" title="争取药到病除"></a>争取药到病除</h5><hr>
+<p>一、 原型链、call/apply、this详解</p>
+<ol>
+<li><p>prototype和__proto__的概念</p>
+<p>prototype是函数的一个属性（每个函数都有一个prototype属性），这个属性是一个指针指向一个对象，这个对象称作这个函数的原型对象。</p>
+<p>__proto__是对象的内置属性（请注意：prototype是函数的内置属性，、__proto__是对象的内置属性），是js内部使用寻找原型链的属性。</p>
+<p>用chrome和FF都可以访问到对象的__proto__属性，IE不可以。</p>
+</li>
+<li><p>new 的过程</p>
+<p><pre><code>var Person = function(){};<br>var p = new Person();</code></pre></p>
+<p>new的过程拆分成以下三步：</p>
+<p>(1) <code>var p={}</code>; 也就是说，初始化一个对象p;</p>
+<p>(2) <code>p.__proto__ = Person.prototype</code>;</p>
+<p>(3) <code>Person.call(p)</code>; 也就是说构造p，也可以称之为初始化p</p>
+<p>关键在于第二步，我们来证明一下：</p>
+<p><pre><code>var Person = function(){};<br>var p = new Person();<br>alert(p.<strong>proto</strong> === Person.prototype);</code></pre></p>
+<p>这段代码会返回true。说明我们步骤2是正确的。</p>
+</li>
+<li><p>call、apply</p>
+<p>二者用途是相同的，都是通过改变函数this对象（作用域对象）来扩展作用域。</p>
+<p>不同之处在于call和apply接收参数的方式不同:</p>
+<pre><code>function callSum(num1, num2){
+ return sum.apply(this, arguments);
+}
+
+function callSum(num1, num2){
+ return sum.apply(this, [num1, num2]);
+}</code></pre>
+
+<pre><code>function callSum(num1, num2){
+ return sum.call(this, num1, num2);
+}</code></pre>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/12/基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风陵渡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/12/基础知识/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T21:11:04+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#前端基础知识总结</p>
+<p>##Html</p>
+<p>1.块级元素与行内元素</p>
+<blockquote>
+<p>块元素(block element) HTML标签分类明细 </p>
+<pre><code>* address - 地址 
+* blockquote - 块引用 
+* center - 举中对齐块 
+* dir - 目录列表 
+* div - 常用块级容易，也是css layout的主要标签 
+* dl - 定义列表 
+* fieldset - form控制组 
+* form - 交互表单 （只能用来容纳其它块元素） 
+* h1 - 大标题 
+* h2 - 副标题 
+* h3 - 3级标题 
+* h4 - 4级标题 
+* h5 - 5级标题 
+* h6 - 6级标题 
+* hr - 水平分隔线 
+* isindex - input prompt 
+* menu - 菜单列表 
+* noframes - frames可选内容，（对于不支持frame的浏览器显示此区块内容 
+* noscript - 可选脚本内容（对于不支持script的浏览器显示此内容） 
+* ol - 排序表单 
+* p - 段落 
+* pre - 格式化文本 
+* table - 表格 
+* ul - 非排序列表 
+</code></pre></blockquote>
+<pre><code>内联元素(inline element) HTML标签分类明细 
+    * a - 锚点 
+    * abbr - 缩写 
+    * acronym - 首字 
+    * b - 粗体(不推荐) 
+    * bdo - bidi override 
+    * big - 大字体 
+    * br - 换行 
+    * cite - 引用 
+    * code - 计算机代码(在引用源码的时候需要) 
+    * dfn - 定义字段 
+    * em - 强调 
+    * font - 字体设定(不推荐) 
+    * i - 斜体 
+    * img - 图片 
+    * input - 输入框 
+    * kbd - 定义键盘文本 
+    * label - 表格标签 
+    * q - 短引用 
+    * s - 中划线(不推荐) 
+    * samp - 定义范例计算机代码 
+    * select - 项目选择 
+    * small - 小字体文本 
+    * span - 常用内联容器，定义文本内区块 
+    * strike - 中划线 
+    * strong - 粗体强调 
+    * sub - 下标 
+    * sup - 上标 
+    * textarea - 多行文本输入框 
+    * tt - 电传文本 
+    * u - 下划线 
+    * var - 定义变量
+
+
+可变元素  HTML标签分类明细 
+    * applet - java applet　　 
+    * button - 按钮　　 
+    * del - 删除文本　　 
+    * iframe - inline frame　　 
+    * ins - 插入的文本　　 
+    * map - 图片区块(map)　　 
+    * object - object对象　　 
+    * script - 客户端脚本
+</code></pre><p>2.行内元素有哪些？块级元素有哪些？空（void）元素有哪些？<br>    声明：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。<br>    （1）行内元素有：a b span img input select strong（强调的语气）<br>    （2）块级元素有：div ul ol li dl（列表） dt（列表中的项目） dd（列表中项目的描述） h1 h2 h3 h4…p<br>    （3）常见的空元素：<br>      <br> <hr> <img> <input> <link> <meta><br>          鲜为人知的空元素：<br>      <area> <base> <col> <command> <embed> <keygen> <param> <source> <track> <wbr></p>
+<p>3.meta定义和用法</p>
+<p><meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词。</p>
+<p><meta> 标签位于文档的头部，不包含任何内容。<meta> 标签的属性定义了与文档相关联的名称/值对。</p>
+<p>4.css link和@import区别用法</p>
+<p>（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;<br>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br>（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
+<ul>
+<li>link</li>
+</ul>
+<blockquote>
+<link href="CSSurl路径" rel="stylesheet" type="text/css">
+
+</blockquote>
+<ul>
+<li>@import</li>
+</ul>
+<blockquote>
+<p>在html中</p>
+<style type="text/css">
+@import url(CSS文件路径地址);
+</style>
+
+<p>在css中<br>@import url(CSS文件路径地址);</p>
+</blockquote>
+<p>5.介绍一下你对浏览器内核的理解</p>
+<p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br>（1）渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。<br>（2）JS引擎则：解析和执行javascript来实现网页的动态效果。<br>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+<p>6.jquery对象与Dom对象<br>两者不同，各有各的方法，获取到的jquery对象本身是一个集合。所以如果jquery对象要转换为dom对象则必须取出其中的某一项，一般可通过索引取出。<br>如$(‘#id’)[0]</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/08/Python3-4-pyOpenGL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -805,7 +1173,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
