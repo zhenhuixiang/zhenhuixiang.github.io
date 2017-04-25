@@ -103,7 +103,7 @@ __proto__是对象的内置属性（请注意：prototype是函数的内置属�
 prototype和__proto__的概念
 prototype是函数的一个属性（每个函数都有一个prototype属性），这个属性是一个指针指向一个对象，这个对象称作这个函数的原型对象。
 __proto__是对象的内置属性（请注意：prototype是函数的内置属性，、__proto__是对象的内置属性），是js">
-<meta property="og:updated_time" content="2017-04-24T12:39:00.259Z">
+<meta property="og:updated_time" content="2017-04-25T07:04:19.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js疑难杂症">
 <meta name="twitter:description" content="js疑难杂症聚集地争取药到病除
@@ -379,6 +379,13 @@ function callSum(num1, num2){
  return sum.call(this, num1, num2);
 }</code></pre>
 </li>
+<li><p>RegExp对象的方法</p>
+<p>JavaScript RegExp 对象有 3 个方法：test()、exec() 和 compile()。</p>
+<p>(1) test() 方法用来检测一个字符串是否匹配某个正则表达式，如果匹配成功，返回 true ，否则返回 false；</p>
+<p>(2) exec() 方法用来检索字符串中与正则表达式匹配的值。exec() 方法返回一个数组，其中存放匹配的结果。如果未找到匹配的值，则返回 null；</p>
+<p>(3) compile() 方法可以在脚本执行过程中编译正则表达式，也可以改变已有表达式。</p>
+<p>注：match是支持正则表达式的String对象的方法</p>
+</li>
 </ol>
 
       
@@ -419,6 +426,10 @@ function callSum(num1, num2){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/25/前端知识点/" rel="prev" title="前端知识点">
+                前端知识点 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -490,7 +501,7 @@ function callSum(num1, num2){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
