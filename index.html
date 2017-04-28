@@ -257,6 +257,305 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/28/第一次笔试（百度）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风陵渡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/28/第一次笔试（百度）/" itemprop="url">
+                  js疑难杂症
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T00:06:31+08:00">
+                2017-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="第一次笔试总结"><a href="#第一次笔试总结" class="headerlink" title="第一次笔试总结"></a>第一次笔试总结</h3><h4 id="一、编程题"><a href="#一、编程题" class="headerlink" title="一、编程题"></a>一、编程题</h4><p><strong>问题:</strong></p>
+<p>时间限制：1秒<br>空间限制：32768K<br>度度熊想去商场买一顶帽子，商场里有N顶帽子，有些帽子的价格可能相同。度度熊想买一顶价格第三便宜的帽子，问第三便宜的帽子价格是多少？<br>输入描述:</p>
+<blockquote>
+<p>首先输入一个正整数N（N &lt;= 50），接下来输入N个数表示每顶帽子的价格（价格均是正整数，且小于等于1000）</p>
+</blockquote>
+<p><strong><em>输出描述:</em></strong></p>
+<blockquote>
+<p>如果存在第三便宜的帽子，请输出这个价格是多少，否则输出-1</p>
+</blockquote>
+<p><strong><em>输入例子:</em></strong></p>
+<blockquote>
+<p>10<br>10 10 10 10 20 20 30 30 40 40</p>
+</blockquote>
+<p><strong><em>输出例子:</em></strong></p>
+<blockquote>
+<p>30</p>
+</blockquote>
+<p>后来晚上写出来的答案：</p>
+<pre><code>var readline = require('readline');
+
+var  rl = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+});
+//上面是输入输出实例
+var arr,N=-1;
+
+rl.on('line', function(line){
+    if (N < 0) { // 第一行读取n
+        N = parseInt(line.trim())
+    }else{
+        var arr = line.split(' ');
+        if(arr.length != N){
+            console.log(-1);
+        }else{
+            arr.sort(function(a,b){
+                return a-b;
+            });
+            var newarr = [],k = 1;
+            newarr[0] = arr [0];
+            for(var i = 1; i < arr.length; i++){
+                if(arr[i] != arr[i-1]){
+                    newarr.push(arr[i]);
+                    k++;
+                }
+                if(k==3) {
+                    console.log(newarr)
+                    return;
+                };
+            }
+            console.log(-1)
+            return;
+        }  
+    }    
+});</code></pre>
+
+<p>先说编程上的问题：</p>
+<ol>
+<li><p>sort()对 <code>1 100 2 3 23</code> 直接排序出来的结果是 <code>1 100 2 23 3</code>，原来没注意这个问题这里应该用<code>arr.sort(function(a,b){return a-b;});</code>。</p>
+</li>
+<li><p>没怎么编过这种直接编的题，一开始直接蒙了，输入输出查了会，没有经验，自己在那用编辑器调试了好久，主要就是第一个编程题，自己也没那么专注，浪费时间。心里居然还在纠结我查网页会不会出问题。</p>
+</li>
+<li><p>编程上有这样几个问题，①算法和数据结构 ②node ③基础代码不够 ④遇见不会的不要慌也不要慢悠悠 ⑤做题先看看难易，由简到难好好做</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/js跨域请求/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甄慧翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风陵渡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/26/js跨域请求/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T09:52:49+08:00">
+                2017-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/前端知识点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -660,47 +959,70 @@
       
         
           
-            <h2 id="js疑难杂症聚集地"><a href="#js疑难杂症聚集地" class="headerlink" title="js疑难杂症聚集地"></a>js疑难杂症聚集地</h2><h5 id="争取药到病除"><a href="#争取药到病除" class="headerlink" title="争取药到病除"></a>争取药到病除</h5><hr>
-<p>一、 原型链、call/apply、this详解</p>
-<ol>
-<li><p>prototype和__proto__的概念</p>
-<p>prototype是函数的一个属性（每个函数都有一个prototype属性），这个属性是一个指针指向一个对象，这个对象称作这个函数的原型对象。</p>
-<p>__proto__是对象的内置属性（请注意：prototype是函数的内置属性，、__proto__是对象的内置属性），是js内部使用寻找原型链的属性。</p>
-<p>用chrome和FF都可以访问到对象的__proto__属性，IE不可以。</p>
-</li>
-<li><p>new 的过程</p>
-<p><pre><code>var Person = function(){};<br>var p = new Person();</code></pre></p>
+            <h2 id="js疑难杂症聚集地"><a href="#js疑难杂症聚集地" class="headerlink" title="js疑难杂症聚集地"></a>js疑难杂症聚集地</h2><hr>
+<h3 id="一、-原型链、call-apply、this详解"><a href="#一、-原型链、call-apply、this详解" class="headerlink" title="一、 原型链、call/apply、this详解"></a>一、 原型链、call/apply、this详解</h3><h4 id="1-prototype和-proto-的概念"><a href="#1-prototype和-proto-的概念" class="headerlink" title="1. prototype和__proto__的概念"></a>1. prototype和__proto__的概念</h4><p>  prototype是函数的一个属性（每个函数都有一个prototype属性），这个属性是一个指针指向一个对象，这个对象称作这个函数的原型对象。</p>
+<p>  __proto__是对象的内置属性（请注意：prototype是函数的内置属性，、__proto__是对象的内置属性），是js内部使用寻找原型链的属性。</p>
+<p>  用chrome和FF都可以访问到对象的__proto__属性，IE不可以。</p>
+<h4 id="2-new-的过程"><a href="#2-new-的过程" class="headerlink" title="2. new 的过程"></a>2. new 的过程</h4><pre><code>var Person = function(){};
+var p = new Person();</code></pre>
+
 <p>new的过程拆分成以下三步：</p>
 <p>(1) <code>var p={}</code>; 也就是说，初始化一个对象p;</p>
 <p>(2) <code>p.__proto__ = Person.prototype</code>;</p>
 <p>(3) <code>Person.call(p)</code>; 也就是说构造p，也可以称之为初始化p</p>
 <p>关键在于第二步，我们来证明一下：</p>
-<p><pre><code>var Person = function(){};<br>var p = new Person();<br>alert(p.<strong>proto</strong> === Person.prototype);</code></pre></p>
+<pre><code>var Person = function(){};
+var p = new Person();
+alert(p.__proto__ === Person.prototype);</code></pre>
+
 <p>这段代码会返回true。说明我们步骤2是正确的。</p>
-</li>
-<li><p>call、apply</p>
-<p>二者用途是相同的，都是通过改变函数this对象（作用域对象）来扩展作用域。</p>
-<p>不同之处在于call和apply接收参数的方式不同:</p>
-<pre><code>function callSum(num1, num2){
- return sum.apply(this, arguments);
-}
+<h4 id="3-call、apply"><a href="#3-call、apply" class="headerlink" title="3. call、apply"></a>3. call、apply</h4><p>  二者用途是相同的，都是通过改变函数this对象（作用域对象）来扩展作用域。</p>
+<p>  不同之处在于call和apply接收参数的方式不同:</p>
+  <pre><code>function callSum(num1, num2){
+    return sum.apply(this, arguments);
+  }
 
-function callSum(num1, num2){
- return sum.apply(this, [num1, num2]);
-}</code></pre>
+  function callSum(num1, num2){
+    return sum.apply(this, [num1, num2]);
+  }</code></pre>
 
-<pre><code>function callSum(num1, num2){
- return sum.call(this, num1, num2);
-}</code></pre>
-</li>
-<li><p>RegExp对象的方法</p>
-<p>JavaScript RegExp 对象有 3 个方法：test()、exec() 和 compile()。</p>
+  <pre><code>function callSum(num1, num2){
+    return sum.call(this, num1, num2);
+  }</code></pre>
+
+<h3 id="二、-RegExp对象的方法"><a href="#二、-RegExp对象的方法" class="headerlink" title="二、 RegExp对象的方法"></a>二、 RegExp对象的方法</h3><p>JavaScript RegExp 对象有 3 个方法：test()、exec() 和 compile()。</p>
 <p>(1) test() 方法用来检测一个字符串是否匹配某个正则表达式，如果匹配成功，返回 true ，否则返回 false；</p>
 <p>(2) exec() 方法用来检索字符串中与正则表达式匹配的值。exec() 方法返回一个数组，其中存放匹配的结果。如果未找到匹配的值，则返回 null；</p>
 <p>(3) compile() 方法可以在脚本执行过程中编译正则表达式，也可以改变已有表达式。</p>
 <p>注：match是支持正则表达式的String对象的方法</p>
+<h3 id="三、-JavaScript异步编程的四种方法"><a href="#三、-JavaScript异步编程的四种方法" class="headerlink" title="三、 JavaScript异步编程的四种方法"></a>三、 JavaScript异步编程的四种方法</h3><p><strong>1.回调函数</strong></p>
+<p>f1(f2);</p>
+<p>回调函数是异步编程的基本方法。其优点是易编写、易理解和易部署；缺点是不利于代码的阅读和维护，各个部分之间高度耦合 （Coupling），流程比较混乱，而且每个任务只能指定一个回调函数。</p>
+<p><strong>2.事件监听</strong></p>
+<p>f1.on(‘done’,f2);</p>
+<p>事件监听即采用事件驱动模式，任务的执行不取决于代码的顺序，而取决于某个事件是否发生。其优点是易理解，可以绑定多个事件，每个事件可以指定多个回调函数，可以去耦合， 有利于实现模块化；缺点是整个程序都要变成事件驱动型，运行流程会变得不清晰。</p>
+<p><strong>3.  发布/订阅</strong></p>
+<p>f1: jQuery.publish(“done”);</p>
+<p>f2: jQuery.subscribe(“done”, f2);</p>
+<p>假定存在一个”信号中心”，某个任务执行完成，就向信号中心”发布”（publish）一个信号，其他任务可以向信号中心”订阅”（subscribe）这个信号，从而知道什么时候自己可以开始执行，这就叫做 “发布/订阅模式” （publish-subscribe pattern），又称 “观察者模式” （observer pattern）。该 方法的性质与”事件监听”类似，但其优势在于可以 通过查看”消息中心”，了解存在多少信号、每个信号有多少订阅者，从而监控程序的运行。</p>
+<p><strong>4.promise对象</strong></p>
+<p>f1().then(f2);</p>
+<p>Promises对象是CommonJS工作组提出的一种规范，目的是为异步编程提供 统一接口 ；思想是， 每一个异步任务返回一个Promise对象，该对象有一个then方法，允许指定回调函数。其优点是回调函数是链式写法，程序的流程非常清晰，而且有一整套的配套方法， 可以实现许多强大的功能，如指定多个回调函数、指定发生错误时的回调函数， 如果一个任务已经完成，再添加回调函数，该回调函数会立即执行，所以不用担心是否错过了某个事件或信号；缺点就是编写和理解相对比较难。</p>
+<h3 id="四、-js跨域请求"><a href="#四、-js跨域请求" class="headerlink" title="四、 js跨域请求"></a>四、 js跨域请求</h3><p><strong>[转载：<a href="http://www.cnblogs.com/2050/p/3191744.html" target="_blank" rel="external">js中几种实用的跨域方法原理详解</a>]</strong></p>
+<p>这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。</p>
+<ol>
+<li><p>通过jsonp跨域</p>
+</li>
+<li><p>通过修改document.domain来跨子域</p>
+</li>
+<li><p>使用window.name来进行跨域</p>
+</li>
+<li><p>使用HTML5中新引进的window.postMessage方法来跨域传送数据</p>
 </li>
 </ol>
+<p>结语：</p>
+<p>除了以上几种方法外，还有flash、在服务器上设置代理页面等跨域方式，这里就不做介绍了。</p>
+<p>以上四种方法，可以根据项目的实际情况来进行选择应用，个人认为window.name的方法既不复杂，也能兼容到几乎所有浏览器，这真是极好的一种跨域方法。</p>
 
           
         
@@ -1495,7 +1817,7 @@ function callSum(num1, num2){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
